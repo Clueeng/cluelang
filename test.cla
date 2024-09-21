@@ -1,0 +1,15 @@
+
+exec getVar(a, b) {
+    c = a * b
+    return c
+}
+
+input("X:") -> x
+input("Y:") -> y
+z = getVar(x, y)
+
+loop:z{
+    output("Loop running")
+}
+
+output(z)
