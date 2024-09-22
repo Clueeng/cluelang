@@ -1,15 +1,10 @@
+exec test(x) {
 
-exec getVar(a, b) {
-    c = a * b
-    return c
+    return x * 2
 }
 
-input("X:") -> x
-input("Y:") -> y
-z = getVar(x, y)
-
-loop:z{
-    output("Loop running")
+v = test(2)
+loop:12{
+    v = test(v)
+    output(v)
 }
-
-output(z)
